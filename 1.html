@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	li{list-style: none;}
+	.lis{list-style: none; width: 80px; height: 30px; border:1px solid #333; position:relative;}
+	.lis a {display: block; line-height:  30px; text-align: center; text-decoration: none; color: #000; background: :#f1f1f1;}
+	ul ul{padding: 0; margin: 0; width: 140px; border: 1px solid #333; position: absolute; top: 30px; left: -1px; display: none;}
+	ul li {text-align: center; line-height: 30px;}
+
+</style>
+<body>
+	<ul>
+		<li id = "li1" class="lis">
+			<a id= "link" href="#">aaa</a>
+			<ul id = "ul1">
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ul>
+		</li>
+	</ul>
+<script>
+	/*
+	get element 
+	1. use id name to get element document.getElementById()
+	2. use class name to get element document.getElementByTagName()
+
+
+	Event: Mouse event, keyboard event, system event, form event, custom event
+
+	Function:
+	function abc(){
+	
+	}
+	1. directly call abc();
+	2. event call  element.event = functionname oDiv.onclick = abc();
+
+
+	Test:
+	alert(); a warning window with confirm button
+
+
+	*/
+	document.getElementById('li1').onmouseover = show;
+	document.getElementById('li1').onmouseout = hide;
+
+	function show(){
+		document.getElementById('ul1').style.display = 'block';
+		document.getElementById('link').style.background = 'yellow';
+	}
+
+	function hide(){
+		document.getElementById('ul1').style.display = 'none';
+
+	}
+
+
+
+</script>
+</body>
+</html>
