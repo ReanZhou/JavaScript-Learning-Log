@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	p { margin:0; }
+	#div1{
+		width: 500px;height: 300px;border: 1px solid #333;background:#f1f1f1; margin: auto; position: relative;
+	}
+	#content{width: 1349px; height: 500px;}
+	.enter{
+		height: 300px;
+		
+	}
+	.left_ul{
+    margin-top: 10px;
+    width: 500px;
+    overflow: hidden;
+
+
+	}
+	.right_ul{
+    margin-top: 10px;
+    overflow: hidden;
+}
+	.box_ul{
+    margin: 0 auto;
+}
+.left_ul p{
+	margin-top: 10px;
+	margin-left:5px;
+	float: left;
+
+    word-wrap:break-word;
+    font-size: 16px;
+
+}
+.left_ul span{
+	margin-top: 10px;
+	float: left;
+	
+	
+}
+.div2{
+	width: 300px;
+	margin: 0 auto;
+}
+
+.right_ul p{
+	margin-top: 10px;
+	margin-left:5px;
+	float: right;
+
+    word-wrap:break-word;
+    font-size: 16px;
+
+}
+.right_ul span{
+	margin-top: 10px;
+	float: right;
+
+
+</style>
+<script>
+	window.onload = function(){
+		var oDiv = document.getElementById('div1');
+		var oSpan = document.getElementById('span1');
+		var oTxt = document.getElementById('text1');
+		var oBtn = document.getElementById('btn1');
+		var sendFlag = 0;
+		var src = '';
+		oSpan.onclick = function(){
+			if(oSpan.innerHTML == "Rean:"){
+				oSpan.innerHTML = "Sam:";
+				sendFlag = 1;
+			} else{
+				oSpan.innerHTML = "Rean:"
+				sendFlag = 0;
+			}
+		}
+
+		oBtn.onclick = function () {
+			
+			if(oTxt.value == ""){
+				alert("warning")
+			} 
+			if(sendFlag == 0){
+                src = '<div class="left_ul box_ul"><span>Rean:</span><p>'+ oTxt.value +'</p></div>' + src;
+            } else{
+            	src = '<div class="right_ul box_ul"><p>' + oTxt.value + '</p>' + '<span>Sam:</span> '+ '</div>' + src;
+
+            }
+			
+			oTxt.value = '';
+            oDiv.innerHTML = src;
+		}
+
+	}
+</script>
+<body>
+	<div id='content'>
+		<div id="div1">
+			<div class="enter">
+				
+			</div>
+
+		</div>
+		<div class="div2">
+			<span id= "span1">Rean:</span>
+			<input id="text1" type="text" name="">
+			<input id="btn1" type="button" value="send">
+		</div>
+	</div>
+	
+	
+	
+	
+	
+</body>
+</html>

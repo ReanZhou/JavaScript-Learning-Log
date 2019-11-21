@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	/*
+	HTML attribute: Read, Write
+	Name
+	Value
+	Read operation:get, find value 
+	element.Name
+
+	Write operation: Instead, edit
+	element.Name = new value
+
+	innterHTML
+
+	*/
+
+	window.onload = function(){
+		var oBtn = document.getElementById('btn1');
+		var oTex = document.getElementById('text1');
+		var oSelect = document.getElementById('select1');
+		var oP = document.getElementById("p1");
+		oBtn.onclick = function(){
+			//alert(oBtn.id);
+			//alert(oTex.value);
+			//alert(oSelect.value + oTex.value);
+			//this.value = 'BButton';
+			//oTex.value = "button change"
+			//oTex.value = oSelect.value;
+
+			//alert(oP.innerHTML);
+			oP.innerHTML = oTex.value;
+		}
+		
+	}
+</script>
+<body>
+	<input id="text1" type = "text" value=""/>
+	<select id="select1">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	<input id="btn1" type="button" value="button">
+
+	
+	<p id="p1">ssssssss</p>
+	
+</body>
+</html>

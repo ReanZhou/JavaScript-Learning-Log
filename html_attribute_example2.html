@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	 // style="font-size: 15px"
+	window.onload = function(){
+		oBtn1 = document.getElementById("btn1");
+		oBtn2 = document.getElementById("btn2");
+		oBtn3 = document.getElementById("btn3");
+		oBtn4 = document.getElementById("btn4");
+		oP = document.getElementById("p1");
+		var num = 15;
+		oBtn2.onclick = function(){
+			num ++;
+			oP.style.fontSize = num + 'px';
+
+		}
+		oBtn1.onclick = function(){
+			num --;
+			oP.style.fontSize = num + 'px';
+
+		}
+		// add class: className
+		oBtn3.onclick = function () {
+			oP.className = 'red';
+		}
+
+		oBtn4.onclick = function () {
+			oP.className = 'yellow';
+		}
+
+	}
+</script>
+<style>
+	.red{
+		width:300px; background: red; padding: 20px; color:yellow; border:10px solid #5F5B5B;	}
+	.yellow{
+		width:400px; background: yellow; padding: 30px; color:blue; border:20px solid #5F5B5B;	}
+</style>
+<body>
+	<input id = "btn1" type="button" value="-">
+	<input id="btn2" type="button" value="+">
+	<input id = "btn3" type="button" value="Red">
+	<input id="btn4" type="button" value="Yellow">
+
+	<p id = "p1"> This example fetches the document's current HTML markup and replaces the "<" characters with the HTML entity "&lt;", thereby essentially converting the HTML into raw text. This is then wrapped in a  element. Then the value of innerHTML is changed to this new string. As a result, the document contents are replaced with a display of the page's entire source code.</p>
+</body>
+</body>
+</html>

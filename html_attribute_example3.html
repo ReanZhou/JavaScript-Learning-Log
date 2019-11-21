@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	#div2{width: 100px; height: 100px; border:1px solid red;}
+</style>
+<body>
+	Attribute Name: <input id="attr" type="text"> <br/>
+	Attribute Value: <input id="val" type="text">
+	<input id = 'btn' type="button" value="Yes" name="">
+	<div id="div1"></div>
+	<div id="div2"></div>
+
+	
+</body>
+<script>
+	oDiv = document.getElementById('div1');
+	oDiv2 = document.getElementById('div2');
+	oAttr = document.getElementById('attr');
+	oBtn = document.getElementById('btn');
+	oVal = document.getElementById('val');
+	
+	// oDiv.style.styleFloat = 'left';//IE(styleFloat)
+	// oDiv.style.cssFloat = 'left';// not IE(styleFloat)
+	oBtn.onclick = function(){
+		
+		oDiv2.style[oAttr.value] = oVal.value;
+	}
+
+
+
+
+</script>
+</html>
